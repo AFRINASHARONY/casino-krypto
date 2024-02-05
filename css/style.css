@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.head-container {
+    background: black;
+    background-size: cover;
+    font-family: monospace;
+    padding-bottom: 10px;
+    padding-top: 20px;
+}
+
+.logo-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 100px;
+    
+}
+
+.logo {
+    margin-right: 10px;
+}
+
+.website-name {
+    color: white;
+    font-size: 18px;
+}
+
+.bar {
+    width: 1100px;
+    height: 40px;
+    color: white;
+    margin: auto;
+    position: relative;
+}
+
+.bar ul {
+    float: left;
+    list-style: none;
+    display: block;
+    position: relative; /* Ensure submenus are positioned relative to the main menu */
+    z-index: 1; /* Set z-index to bring the main menu above other elements */
+}
+
+.bar ul li {
+    float: left;
+    list-style: none;
+    display: block;
+    width: 210px;
+    background-color: rgba(32, 32, 32, 0.3);
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 4px;
+    position: relative; /* Ensure submenus are positioned relative to this item */
+}
+
+ul li a {
+    display: block;
+    cursor: context-menu;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+ul li a:hover {
+    background-color: floralwhite;
+    color: steelblue;
+}
+
+.bar ul li ul {
+    position: absolute;
+    top: 100%; /* Position the submenu below the parent item */
+    left: 0;
+    display: none;
+    z-index: 2; /* Set z-index to bring the submenu above other elements */
+    background-color: black;
+}
+
+.bar ul li:hover ul {
+    display: block;
+}
+
+.footer {
+    background-color: black;
+    padding: 20px 0;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Allow columns to wrap to the next line if the width is not sufficient */
+    font-family: monospace;
+}
+
+.footer-column {
+    flex: 1;
+    text-align: center;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.footer-column a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-column a:hover {
+    color: steelblue;
+}
+
+/* Additional CSS for the column arrangement */
+.footer-column + .footer-column {
+    margin-left: 20px;
+}
